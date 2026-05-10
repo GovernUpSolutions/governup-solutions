@@ -959,32 +959,17 @@
         </div>
       </div>
       <div>
-        <div class="form-group" style="margin-bottom:14px;">
-          <label class="form-label">Name</label>
-          <input class="form-input" type="text" placeholder="Your name">
+        <div style="padding:36px 40px; background:var(--light); border-left:4px solid var(--blue); display:flex; flex-direction:column; gap:20px; justify-content:center; height:100%;">
+          <p style="font-size:16px; color:var(--navy); line-height:1.7;">
+            Send us a message directly at <strong>hello@governupsolutions.com</strong> — we respond to all partnership, press, and general inquiries within one business day.
+          </p>
+          <a href="mailto:hello@governupsolutions.com?subject=GovernUp%20Inquiry" class="form-submit" style="display:inline-block; text-align:center; text-decoration:none;">
+            Email Us →
+          </a>
+          <p style="font-size:12px; color:var(--muted); line-height:1.6;">
+            For community management inquiries, visit <a href="https://cmpcommunities.com" style="color:var(--blue);">cmpcommunities.com</a> directly.
+          </p>
         </div>
-        <div class="form-group" style="margin-bottom:14px;">
-          <label class="form-label">Email</label>
-          <input class="form-input" type="email" placeholder="your@email.com">
-        </div>
-        <div class="form-group" style="margin-bottom:14px;">
-          <label class="form-label">Inquiry Type</label>
-          <select class="form-select">
-            <option value="">Select one</option>
-            <option>Partnership or investment inquiry</option>
-            <option>Media or press inquiry</option>
-            <option>Covenant platform inquiry</option>
-            <option>General question</option>
-          </select>
-        </div>
-        <div class="form-group" style="margin-bottom:20px;">
-          <label class="form-label">Message</label>
-          <textarea class="form-textarea" placeholder="Tell us about your inquiry..."></textarea>
-        </div>
-        <button class="form-submit" id="gu-submit">Send Message →</button>
-        <p style="font-size:12px; color:var(--muted); margin-top:16px; line-height:1.6;">
-          For community management inquiries, please visit <a href="https://cmpcommunities.com" style="color:var(--blue);">cmpcommunities.com</a> directly.
-        </p>
       </div>
     </div>
   </div>
@@ -1038,14 +1023,7 @@
   }, { threshold: 0.1 });
   reveals.forEach(el => observer.observe(el));
 
-  document.getElementById('gu-submit').addEventListener('click', function() {
-    this.textContent = 'Message Sent ✓';
-    this.style.background = '#065F46';
-    setTimeout(() => {
-      this.textContent = 'Send Message →';
-      this.style.background = '';
-    }, 3000);
-  });
+
 </script>
 
 </body>
