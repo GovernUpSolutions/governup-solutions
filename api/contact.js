@@ -24,7 +24,7 @@ export default async function handler(req, res) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'GovernUp Website <noreply@covenanthq.app>',
+        from: 'GovernUp Solutions <noreply@covenanthq.app>',
         to: ['hello@governupsolutions.com'],
         reply_to: email || undefined,
         subject: `New GovernUp inquiry: ${name}`.trim(),
