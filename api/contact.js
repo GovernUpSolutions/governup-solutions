@@ -29,6 +29,11 @@ export default async function handler(req, res) {
         reply_to: email || undefined,
         subject: `New GovernUp inquiry: ${name}`.trim(),
         text: `Source: ${source}\n\nName: ${name}\nEmail: ${email}\nInquiry Type: ${interest}\n\nMessage:\n${message}`,
+        headers: {
+          'X-Auto-Response-Suppress': 'All',
+          'Auto-Submitted': 'auto-generated',
+          Precedence: 'bulk',
+        },
       }),
     });
 
