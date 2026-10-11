@@ -3,6 +3,14 @@ export default async function handler(req, res) {
     return res.status(405).json({ ok: false, error: 'Method not allowed' });
   }
 
+  const input = req.body || {};
+  if (typeof input.name !== 'string' || !input.name.trim() || input.name.length > 120 ||
+      typeof input.email !== 'string' || input.email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.email) ||
+      typeof input.message !== 'string' || !input.message.trim() || input.message.length > 5000 ||
+      (input.interest != null && (typeof input.interest !== 'string' || input.interest.length > 200))) {
+    return res.status(400).json({ ok: false, error: 'Please provide a valid name, email, and message.' });
+  }
+
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
     console.error('RESEND_API_KEY not set');
