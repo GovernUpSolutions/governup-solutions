@@ -13,7 +13,7 @@ Production has not been published or changed. This branch retains the existing s
 - Added per-page metadata, canonical URLs, organization structured data, sitemap, and privacy/ownership pages.
 
 ## Founder review before production
-- Approve the proposed tagline and corporate positioning. This draft does not describe the proposed mission or vision as previously adopted policy.
+- Corporate slogans removed at founder direction. The opening identifies GovernUp Solutions and describes its four business areas.
 - Review the public ownership and independence wording and founder biography.
 - Confirm contact-data retention practices and whether additional operational privacy disclosures are needed. The notice describes only the existing hosting/contact implementation; it does not invent a retention period.
 - No approved founder portrait supplied; no substitute likeness used.
